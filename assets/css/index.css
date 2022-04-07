@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont.woff2') format('woff2'),
+        url('../fonts/iconfont.woff') format('woff'),
+        url('../fonts/iconfont.ttf') format('truetype'),
+        url('../fonts/iconfont.svg') format('svg');
+}
+
+.iconfont {
+    margin-right: 8px;
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.layui-footer {
+    text-align: center;
+    font-style: 12px;
+}
+.layui-icon{
+    margin-left: 20px;
+    margin-right: 8px;
+}
+.layui-body{
+    overflow: hidden;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+a{
+    transition: none !important;
+}
+.userinfo{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-style: 12px;
+    user-select: none;
+}
+.layui-side-scroll>.userinfo{
+    border-bottom: 1px solid rgb(40,43,51);
+}
+.layui-nav-img{
+    width: 40px;
+    height: 40px;
+
+}
+.text-avatar{
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgb(0, 150, 136);
+    border-radius: 50%;
+    font-style: 20px;
+    color: #fff;
+    margin-right: 10px;
+}

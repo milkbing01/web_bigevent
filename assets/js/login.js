@@ -60,7 +60,7 @@ $('#form_login').submit(function (e) {
       }
       layer.msg('登录成功')
       localStorage.setItem('token', res.token)
-      location.href = './login.html'
+      location.href = './index.html'
     }
   })
 })
