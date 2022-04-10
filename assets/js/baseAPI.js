@@ -14,8 +14,8 @@ $.ajaxPrefilter(function (options) {
 
   //全局统一挂载回调函数
   options.complete = function (res) {
-    console.log(res);
-    if (res.responseJSON.status == 1 && res.responseJSON.message == '身份认证失败!') {
+    if (res.responseJSON.status == 1 && res.responseJSON.message == '身份认证失败！') {
+      console.log("我执行了");
       localStorage.removeItem('token')
       window.location.href = "./login.html"
     }

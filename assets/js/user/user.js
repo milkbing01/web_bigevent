@@ -15,15 +15,9 @@ $(function () {
             method: "GET",
             url: "/my/userinfo",
             success: function (res) {
-                console.log(res);
                 if (res.status != 0) {
                     return layer.msg = "获取用户信息失败!"
                 }
-                // else if (res.status == 0 && res.message == "获取用户基本信息成功！") {
-                //     console.log("获取用户基本信息成功！");
-                //     alert("获取用户基本信息成功!")
-                //     return layer.msg = "获取用户基本信息成功!"
-                // }
                 form.val("formUserInfo", res.data);
             }
         });
@@ -34,7 +28,20 @@ $(function () {
         e.preventDefault()
         initUserInfo()
     })
+
+    //监听文章中心>基本资料的提交表单的事件
+    $('.layui-form').on('submit', function (e) {
+        const url = '/my/userinfo'
+        const data = $('.layui-form').serialize()
+        e.preventDefault();
+        $.post(url, data, res => {
+            console.log("以下是data");
+            console.log(data);
+            if (res.status !== 0) {
+                return layer.msg('更新用户信息失败！')
+            } 
+            layer.msg('更新用户信息成功！')
+            window.parent.getUserInfo()
+        });
+    });
 })
-
-
-
